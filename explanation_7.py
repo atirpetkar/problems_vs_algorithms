@@ -18,8 +18,8 @@ For finding handler with the Router class, the following logic was implemented:
 1. If RouteTriNode for the path was found and the handler attribute is not None, then return the attribute as the handler.
 
 ## Run time complexity
-For Trie approach, the run time complexity of insert and search is of O(n), where n is the number of tokens upon splitting the path with "/" character.
-
+For Trie approach, the run time complexity of insert and search is of O(n^2), where n is the number of non-trivial words between slashes and it becomes n^2 because of Python's 'in' operation in the loop.
+  
 ## Space complexity
 The memory requirements depends on the following factors:
 1. The no. of tokens in the path (e.g. /home/about contains 2 tokens)
